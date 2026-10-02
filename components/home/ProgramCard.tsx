@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export interface Program {
@@ -6,6 +7,7 @@ export interface Program {
   description: string;
   duration: string;
   category: string;
+  image: string;
 }
 
 interface ProgramCardProps {
@@ -17,30 +19,16 @@ export default function ProgramCard({
 }: ProgramCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-[#075c3a]/30 hover:shadow-xl">
-      <div className="relative flex h-48 items-center justify-center overflow-hidden bg-[#e7f2ed]">
-        <div className="absolute left-0 top-0 h-full w-1.5 bg-[#075c3a]"></div>
+      <div className="relative h-48 overflow-hidden bg-slate-200">
+        <div className="absolute left-0 top-0 z-10 h-full w-1.5 bg-[#3a3837]" />
 
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-[#075c3a] shadow-sm transition duration-300 group-hover:scale-105">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            className="h-10 w-10"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 7.5v9M7.5 12h9"
-            />
-          </svg>
-        </div>
+        <Image
+          src={program.image}
+          alt={program.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition duration-500 group-hover:scale-105"
+        />
       </div>
 
       <div className="flex flex-1 flex-col p-6">
@@ -68,6 +56,7 @@ export default function ProgramCard({
           aria-label={`Learn more about ${program.title}`}
         >
           View Program
+
           <span
             className="transition-transform duration-300 group-hover:translate-x-1"
             aria-hidden="true"

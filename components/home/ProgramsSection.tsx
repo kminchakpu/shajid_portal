@@ -9,6 +9,7 @@ const programs: Program[] = [
       "Build a strong foundation in nursing practice, patient care, clinical skills, and professional healthcare service.",
     duration: "3 Years",
     category: "Nursing",
+    image: "/images/nursing.jpg",
   },
   {
     title: "Basic Midwifery",
@@ -17,6 +18,7 @@ const programs: Program[] = [
       "Develop the knowledge and clinical skills needed to provide professional care for mothers, newborns, and families.",
     duration: "3 Years",
     category: "Midwifery",
+    image: "/images/midwifery.jpg",
   },
   {
     title: "Community Nursing",
@@ -25,6 +27,7 @@ const programs: Program[] = [
       "Prepare to promote health, prevent illness, and provide essential nursing services within communities.",
     duration: "2 Years",
     category: "Community Health",
+    image: "/images/programs/community-nursing.jpg",
   },
   {
     title: "Post-Basic Nursing",
@@ -33,6 +36,7 @@ const programs: Program[] = [
       "Advance your nursing education through specialized academic study and enhanced professional clinical practice.",
     duration: "18 Months",
     category: "Post-Basic",
+    image: "/images/programs/post-basic-nursing.jpg",
   },
 ];
 
