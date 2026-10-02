@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --primary: #075c3a;
+  --primary-dark: #00351f;
+  --primary-light: #0b754b;
+  --border-light: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --font-play: var(--font-play);
+  --font-poppins: var(--font-poppins);
+  --font-open-sans: var(--font-open-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-open-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+button,
+a {
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+.font-play {
+  font-family: var(--font-play), Arial, Helvetica, sans-serif;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: var(--background);
+  font-family: var(--font-play), Arial, Helvetica, sans-serif;
+}
+
+.menu {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--background);
+  font-family: var(--font-play), Arial, Helvetica, sans-serif;
+}
+
+.description {
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  color: var(--background);
+  font-size: 17px;
+}
